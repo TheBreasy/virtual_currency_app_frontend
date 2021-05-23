@@ -59,6 +59,10 @@ p {
   color: #6c757d;
 }
 
+input:focus-visible {
+  outline: none;
+}
+
 .btn--primary {
   border: none;
   border-radius: 1rem;
