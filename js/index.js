@@ -8,4 +8,5 @@
         console.log(json);
     }).catch(err => {
         console.log("😎😎😎");
+        window.location.href = "login.html";
     })
