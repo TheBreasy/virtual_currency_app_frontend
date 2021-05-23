@@ -1,5 +1,54 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html, body, div, span, object, iframe, figure, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, code, em, img, small, strike, strong, sub, sup, tt, b, u, i, ol, ul, li, fieldset, form, label, table, caption, tbody, tfoot, thead, tr, th, td, main, canvas, embed, footer, header, nav, section, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  text-size-adjust: none;
+}
+
+footer, header, nav, section, main {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
 body {
   background-color: #f8f9fa;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 h1, h2, h3, h4 {
@@ -10,8 +59,97 @@ p {
   color: #6c757d;
 }
 
+.btn--primary {
+  border: none;
+  border-radius: 1rem;
+  padding: 0.5rem 2rem;
+  background-color: #0b6efd;
+  color: #ffffff;
+}
+
+.card {
+  border-radius: 1rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  border: none;
+  background-color: #ffffff;
+}
+
+.card-header {
+  border-radius: 1rem 1rem 0 0;
+  padding: 2rem 2rem;
+  background-color: #ffffff;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.08);
+}
+
+.d-flex {
+  display: flex;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.h-100-vh {
+  height: 100vh;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.pt-1 {
+  padding-top: 1rem;
+}
+
+.pb-1 {
+  padding-bottom: 1rem;
+}
+
+.py-1 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.d-block {
+  display: block;
+}
+
 body {
   font-family: "Montserrat", sans-serif;
+}
+
+.uppercase {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.text-center {
+  text-align: center;
+}
+
+h1 {
+  font-size: calc(1.305rem + .66vw);
+}
+
+.color-blue {
+  color: #0b6efd;
+}
+
+.text-decoration-none {
+  text-decoration: none;
+}
+
+.input {
+  border-radius: 2rem;
+  border: none;
+  background-color: #ffffff;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.15);
+  padding: 0.5rem 1rem;
+  width: 80%;
 }
 
 /*# sourceMappingURL=main.css.map */
