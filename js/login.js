@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 const btnLogin = document.querySelector(".login button").addEventListener("click", (e) => {
+=======
+/* const btnLogin = */ document.querySelector(".login button").addEventListener("click", () => {
+>>>>>>> main
     let username = document.querySelector('#email').value;
     let password = document.querySelector('#password').value;
 
@@ -8,7 +12,11 @@ const btnLogin = document.querySelector(".login button").addEventListener("click
             'Content-Type': 'application/json'
         },
         body: JSON.stringify({
+<<<<<<< HEAD
             "username":username,
+=======
+            "username": username,
+>>>>>>> main
             "password": password
         })
     }).then(response => {
@@ -20,7 +28,11 @@ const btnLogin = document.querySelector(".login button").addEventListener("click
             window.location.href = "index.html";
         } else {
             let feedback = document.querySelector(".alert");
+<<<<<<< HEAD
             feedback.textContent = "Login failed buddy.";
+=======
+            feedback.textContent = "Login failed buddy";
+>>>>>>> main
             feedback.classList.remove('hidden');
         }
     })
