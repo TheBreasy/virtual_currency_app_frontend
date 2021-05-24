@@ -53,14 +53,6 @@ h1, h2, h3, h4 {
   color: #343940;
 }
 
-p {
-  color: #6c757d;
-}
-
-input:focus-visible {
-  outline: none;
-}
-
 .container {
   padding-left: 1rem;
   padding-right: 1rem;
@@ -91,6 +83,14 @@ input:focus-visible {
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.08);
 }
 
+.card--icon-m {
+  width: 40px;
+}
+
+.card--icon-s {
+  width: 20px;
+}
+
 .d-flex {
   display: flex;
 }
@@ -119,8 +119,16 @@ input:focus-visible {
   height: 54px;
 }
 
+.h-200-px {
+  height: 200px;
+}
+
 .w-100 {
   width: 100%;
+}
+
+.p-1 {
+  padding: 1rem;
 }
 
 .pt-1 {
@@ -139,6 +147,19 @@ input:focus-visible {
 .py-1 {
   padding-top: 1rem;
   padding-bottom: 1rem;
+}
+
+.pr-1 {
+  padding-right: 1rem;
+}
+
+.pl-1 {
+  padding-left: 1rem;
+}
+
+.py-half {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 .mt-1 {
@@ -200,12 +221,44 @@ h1 {
   color: #000000;
 }
 
+.color-grey {
+  color: #6c757d;
+}
+
+.font-bold {
+  font-weight: bold;
+}
+
 .font-size-xs {
   font-size: 0.8rem;
 }
 
+.font-size-m {
+  font-size: 1rem;
+}
+
+.font-size-l {
+  font-size: 1.5rem;
+}
+
+input:focus-visible {
+  outline: none;
+}
+
+textarea {
+  resize: none;
+}
+
+input, textarea {
+  font-family: "Montserrat", sans-serif;
+}
+
+button {
+  cursor: pointer;
+}
+
 .input {
-  border-radius: 2rem;
+  border-radius: 0.25rem;
   border: none;
   background-color: #ffffff;
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.15);
