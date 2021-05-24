@@ -1,4 +1,4 @@
-/* const btnLogin = */ document.querySelector(".login button").addEventListener("click", () => {
+/* const btnLogin = */ document.querySelector("#login").addEventListener("click", () => {
     let username = document.querySelector('#email').value;
     let password = document.querySelector('#password').value;
 

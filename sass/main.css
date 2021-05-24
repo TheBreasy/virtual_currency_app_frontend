@@ -61,10 +61,18 @@ input:focus-visible {
   outline: none;
 }
 
-.btn--primary {
+.container {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.btn {
   border: none;
   border-radius: 1rem;
   padding: 0.5rem 2rem;
+}
+
+.btn--primary {
   background-color: #0b6efd;
   color: #ffffff;
 }
@@ -76,7 +84,7 @@ input:focus-visible {
   background-color: #ffffff;
 }
 
-.card-header {
+.card--header {
   border-radius: 1rem 1rem 0 0;
   padding: 2rem 2rem;
   background-color: #ffffff;
@@ -97,6 +105,10 @@ input:focus-visible {
 
 .justify-content-evenly {
   justify-content: space-evenly;
+}
+
+.justify-content-between {
+  justify-content: space-between;
 }
 
 .h-100-vh {
