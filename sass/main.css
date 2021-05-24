@@ -87,6 +87,10 @@ h1, h2, h3, h4 {
   width: 40px;
 }
 
+.card--icon-ms {
+  width: 26px;
+}
+
 .card--icon-s {
   width: 20px;
 }
@@ -225,6 +229,14 @@ h1 {
   color: #6c757d;
 }
 
+.color-green {
+  color: #36b653;
+}
+
+.color-red {
+  color: #dc3545;
+}
+
 .font-bold {
   font-weight: bold;
 }
@@ -242,6 +254,10 @@ h1 {
 }
 
 input:focus-visible {
+  outline: none;
+}
+
+textarea:focus-visible {
   outline: none;
 }
 
@@ -272,7 +288,7 @@ nav {
   background-color: #ffffff;
 }
 
-.icon {
+.nav--icon {
   width: 25px;
 }
 
