@@ -119,8 +119,8 @@ h1, h2, h3, h4 {
   height: 100vh;
 }
 
-.h-54-px {
-  height: 54px;
+.h-83-px {
+  height: 83px;
 }
 
 .h-200-px {
@@ -159,6 +159,10 @@ h1, h2, h3, h4 {
 
 .pl-1 {
   padding-left: 1rem;
+}
+
+.pt-half {
+  padding-top: 0.5rem;
 }
 
 .py-half {
@@ -265,7 +269,7 @@ textarea {
   resize: none;
 }
 
-input, textarea {
+input, textarea, select {
   font-family: "Montserrat", sans-serif;
 }
 
