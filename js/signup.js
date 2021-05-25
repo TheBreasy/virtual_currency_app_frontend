@@ -1,5 +1,6 @@
 /* const btnSignup = */ document.querySelector("#signup").addEventListener("click", () => {
-    let username = document.querySelector('#email').value;
+    let email = document.querySelector('#email').value;
+    let nickname = document.querySelector('#nickname').value;
     let password = document.querySelector('#password').value;
     let firstname = document.querySelector('#firstname').value;
     let lastname = document.querySelector('#lastname').value;
@@ -10,7 +11,8 @@
             'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-            "username": username,
+            "username": email,
+            "nickname": nickname,
             "firstname": firstname,
             "lastname": lastname,
             "password": password
