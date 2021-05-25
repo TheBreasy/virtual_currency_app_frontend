@@ -16,7 +16,9 @@
     }).then(json => {
         if(json.status === "success") {
             let token = json.data.token;
+            let id = json.data.id;
             localStorage.setItem("token", token);
+            localStorage.setItem("id", id);
             window.location.href = "index.html";
         } else {
             let feedback = document.querySelector(".alert");
