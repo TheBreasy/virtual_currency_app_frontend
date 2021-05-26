@@ -277,7 +277,7 @@ button {
   cursor: pointer;
 }
 
-.input {
+.form__input {
   border-radius: 0.25rem;
   border: none;
   background-color: #ffffff;
@@ -292,7 +292,7 @@ nav {
   background-color: #ffffff;
 }
 
-.nav--icon {
+.nav__icon {
   width: 25px;
 }
 
