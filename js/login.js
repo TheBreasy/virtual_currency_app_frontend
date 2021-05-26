@@ -17,8 +17,10 @@
         if(json.status === "success") {
             let token = json.data.token;
             let id = json.data.id;
+            let nickname = json.data.nickname;
             localStorage.setItem("token", token);
             localStorage.setItem("id", id);
+            localStorage.setItem("nickname", nickname);
             window.location.href = "index.html";
         } else {
             let feedback = document.querySelector(".alert");
