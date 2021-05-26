@@ -28,7 +28,6 @@ document.querySelector("#send").addEventListener("click", () => {
             'Authorization': 'Bearer ' + localStorage.getItem('token')
         },
         body:JSON.stringify({
-            "sender": localStorage.getItem('id'),
             "recipient": recipient,
             "amount": amount,
             "reason": reason,
