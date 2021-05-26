@@ -6,8 +6,8 @@ fetch("http://localhost:3000/users/" + localStorage.getItem('id'), {
     }
 }).then(response => {
     return response.json();
-    console.log(response.json());
 }).then(data => {
+    console.log(data);
     let getAmount =
         `<img class="card--icon-m mb-1" src="images/coins.svg" alt="coins">
          <p class="mb-1 color-grey font-bold font-size-l">${data.coins}</p>
