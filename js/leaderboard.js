@@ -7,7 +7,7 @@ fetch("http://localhost:3000/api/v1/leaderboard", {
 }).then(response => {
     return response.json();
 }).then(data => {
-    for(let i = data.users.length-1; i >= 0; i--) {
+    for(let i = 0; i <= data.users.length-1; i++) {
         let getUsers =
             `<div class="d-flex justify-content-between align-items-center mt-1 px-1 py-half">
                 <div class="font-bold color-grey">
@@ -17,7 +17,7 @@ fetch("http://localhost:3000/api/v1/leaderboard", {
                 <span class="color-blue">${data.users[i]['coins']}</span>
             </div>`;
 
-        document.querySelector(".leaderboard").insertAdjacentHTML('afterend', getUsers);
+        document.querySelector(".leaderboard").insertAdjacentHTML('beforeend', getUsers);
     }
 }).catch(err => {
     console.log(err);
