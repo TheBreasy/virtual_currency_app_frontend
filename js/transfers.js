@@ -7,7 +7,6 @@ fetch("http://localhost:3000/api/v1/transfers", {
 }).then(response => {
     return response.json();
 }).then(data => {
-    console.log(data);
     for(let i = 0; i < data.data.transfers.length; i++) {
         let sender = data.data.transfers[i]['sender'];
         let nickname = data.user['nickname'];
