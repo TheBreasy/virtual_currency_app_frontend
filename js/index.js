@@ -4,8 +4,6 @@ fetch("http://localhost:3000/api/v1/transfers", {
     }
 }).then(result => {
     return result.json();
-}).then(json => {
-    console.log(json);
 }).catch(err => {
     window.location.href = "login.html";
 });
