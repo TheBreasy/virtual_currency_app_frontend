@@ -1,4 +1,6 @@
-fetch("http://localhost:3000/api/v1/leaderboard", {
+const base_url = "https://exchange-nodejs.herokuapp.com";
+
+fetch(base_url + "/api/v1/leaderboard", {
     method: "get",
     headers: {
         'Content-Type': 'application/json',

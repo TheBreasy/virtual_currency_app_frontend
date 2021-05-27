@@ -1,3 +1,5 @@
+const base_url = "https://exchange-nodejs.herokuapp.com";
+
 //AUTO COMPLETE BEGIN
 // document.querySelector("#recipient").addEventListener("keyup", () => {
 //     let recipient = document.querySelector("#recipient").value;
@@ -9,7 +11,7 @@ document.querySelector("#send").addEventListener("click", () => {
     let amount = parseInt(document.querySelector("#amount").value);
     let reason = document.querySelector("#reason").value;
     let message = document.querySelector("#message").value;
-    fetch('http://localhost:3000/api/v1/transfers', {
+    fetch(base_url + "/api/v1/transfers", {
         method: "post",
         'headers': {
             'Content-Type': 'application/json',

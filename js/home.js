@@ -1,4 +1,6 @@
-fetch("http://localhost:3000/users/" + localStorage.getItem('id'), {
+const base_url = "https://exchange-nodejs.herokuapp.com";
+
+fetch(base_url + "/users/" + localStorage.getItem('id'), {
     method: "get",
     headers: {
         'Content-Type': 'application/json',
@@ -22,7 +24,7 @@ fetch("http://localhost:3000/users/" + localStorage.getItem('id'), {
     console.log(err);
 })
 
-fetch("http://localhost:3000/api/v1/transfers/", {
+fetch(base_url + "/api/v1/transfers/", {
     method: "get",
     headers: {
         'Content-Type': 'application/json',

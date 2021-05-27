@@ -1,4 +1,6 @@
-fetch("http://localhost:3000/api/v1/transfer/history", {
+const base_url = "https://exchange-nodejs.herokuapp.com";
+
+fetch(base_url + "/api/v1/transfer/history", {
     method: "get",
     headers: {
         'Content-Type': 'application/json',

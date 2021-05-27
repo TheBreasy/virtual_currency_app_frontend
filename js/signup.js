@@ -1,3 +1,5 @@
+const base_url = "https://exchange-nodejs.herokuapp.com";
+
 /* const btnSignup = */ document.querySelector("#signup").addEventListener("click", () => {
     let email = document.querySelector('#email').value;
     let nickname = document.querySelector('#nickname').value;
@@ -5,7 +7,7 @@
     let firstname = document.querySelector('#firstname').value;
     let lastname = document.querySelector('#lastname').value;
 
-    fetch('http://localhost:3000/users/signup', {
+    fetch(base_url + "/users/signup", {
         method: "post",
         headers: {
             'Content-Type': 'application/json'
