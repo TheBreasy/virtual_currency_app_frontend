@@ -18,7 +18,7 @@ fetch(base_url + "/api/v1/leaderboard", {
             `<div class="d-flex justify-content-between align-items-center mt-1 px-1 py-half">
                 <div class="font-bold color-grey">
                     <span>${i+1}.</span>
-                    <span>${data.users[i]['firstname']}</span>
+                    <span>${data.users[i]['nickname']}</span>
                 </div>
                 <span class="color-blue">${data.users[i]['coins']}</span>
             </div>`;
