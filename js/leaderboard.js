@@ -1,5 +1,9 @@
 const base_url = "https://exchange-nodejs.herokuapp.com";
 
+if(!localStorage.getItem("token")) {
+    window.location.href = "login.html";
+}
+
 fetch(base_url + "/api/v1/leaderboard", {
     method: "get",
     headers: {

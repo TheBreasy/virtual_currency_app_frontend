@@ -1,5 +1,9 @@
 const base_url = "https://exchange-nodejs.herokuapp.com";
 
+if(!localStorage.getItem("token")) {
+    window.location.href = "login.html";
+}
+
 //AUTO COMPLETE BEGIN
 // document.querySelector("#recipient").addEventListener("keyup", () => {
 //     let recipient = document.querySelector("#recipient").value;
