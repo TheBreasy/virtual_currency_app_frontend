@@ -1,15 +1,3 @@
-fetch("http://localhost:3000/api/v1/transfers", {
-    'headers': {
-        'Authorization': 'Bearer ' + localStorage.getItem('token')
-    }
-}).then(result => {
-    return result.json();
-}).then(json => {
-    console.log(json);
-}).catch(err => {
-    window.location.href = "login.html";
-});
-
 //AUTO COMPLETE BEGIN
 // document.querySelector("#recipient").addEventListener("keyup", () => {
 //     let recipient = document.querySelector("#recipient").value;
@@ -18,7 +6,7 @@ fetch("http://localhost:3000/api/v1/transfers", {
 
 document.querySelector("#send").addEventListener("click", () => {
     let recipient = document.querySelector("#recipient").value;
-    let amount = document.querySelector("#amount").value;
+    let amount = parseInt(document.querySelector("#amount").value);
     let reason = document.querySelector("#reason").value;
     let message = document.querySelector("#message").value;
     fetch('http://localhost:3000/api/v1/transfers', {
@@ -37,5 +25,7 @@ document.querySelector("#send").addEventListener("click", () => {
     }).then(response => {
         window.location.href = "index.html";
         return response.json();
+    }).catch(err => {
+        console.log(err);
     })
 });
