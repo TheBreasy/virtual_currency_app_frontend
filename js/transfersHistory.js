@@ -19,7 +19,7 @@ fetch(base_url + "/api/v1/transfer/history", {
             let getHistory =
                 `<div class="d-flex justify-content-between align-items-center mt-1 px-1 py-half">
                     <div class="d-flex align-items-center">
-                        <span class="font-bold color-grey">${sender} ▶ ${recipient}</span>
+                        <span class="font-bold color-grey">${sender} &rarr;\t ${recipient}</span>
                     </div>
                     <span class="color-blue">₡${data.data.transfers[i]['amount']}</span>
                 </div>`
