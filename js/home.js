@@ -43,7 +43,6 @@ primus.on('data', (json) => {
 });
 
 let updateNotifications = (data) => {
-    console.log(data);
     document.querySelector(".notifications").innerHTML = "";
     for(let i = 0; i <= data.data.transfers.length; i++) {
         let nickname = data.user['nickname'];
