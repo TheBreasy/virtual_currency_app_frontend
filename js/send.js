@@ -39,11 +39,18 @@ document.querySelector("#send").addEventListener("click", () => {
     }).then(response => {
         return response.json();
     }).then(json => {
-        primus.write({
-            "action": "addTransfer",
-            "data": json
-        });
-        window.location.href = "index.html";
+        if(json.status === "success") {
+            primus.write({
+                "action": "addTransfer",
+                "data": json
+            });
+
+            window.location.href = "index.html";
+        } else {
+            let feedback = document.querySelector(".form__alert");
+            feedback.textContent = json.message;
+            feedback.classList.remove("hidden");
+        }
     }).catch(err => {
         console.log(err);
     })

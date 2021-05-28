@@ -201,6 +201,10 @@ h1, h2, h3, h4 {
   bottom: 0;
 }
 
+.hidden {
+  display: none;
+}
+
 body {
   font-family: "Montserrat", sans-serif;
 }
@@ -240,6 +244,10 @@ h1 {
 
 .color-red {
   color: #dc3545;
+}
+
+.color-alert {
+  color: #f8d7da;
 }
 
 .font-bold {
@@ -286,6 +294,11 @@ button {
   padding: 0.75rem 1rem;
   width: 80%;
   font-size: 1rem;
+}
+
+.form__alert {
+  background-color: #f8d7da;
+  color: #dc3545;
 }
 
 nav {

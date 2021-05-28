@@ -23,9 +23,9 @@ const base_url = "https://exchange-nodejs.herokuapp.com";
             localStorage.setItem("id", id);
             window.location.href = "index.html";
         } else {
-            let feedback = document.querySelector(".alert");
-            feedback.textContent = "Login failed buddy";
-            feedback.classList.remove('hidden');
+            let feedback = document.querySelector(".form__alert");
+            feedback.textContent = json.message;
+            feedback.classList.remove("hidden");
         }
     })
 });
