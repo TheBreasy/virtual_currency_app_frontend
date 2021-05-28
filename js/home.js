@@ -4,6 +4,14 @@ if(!localStorage.getItem("token")) {
     window.location.href = "login.html";
 }
 
+primus = Primus.connect("/", {
+    reconnect: {
+        max: Infinity // Number: The max delay before we try to reconnect.
+        , min: 500 // Number: The minimum delay before we try reconnect.
+        , retries: 10 // Number: How many times we should try to reconnect.
+    }
+});
+
 fetch(base_url + "/users/" + localStorage.getItem('id'), {
     method: "get",
     headers: {
@@ -28,15 +36,15 @@ fetch(base_url + "/users/" + localStorage.getItem('id'), {
     console.log(err);
 })
 
-fetch(base_url + "/api/v1/transfers/", {
-    method: "get",
-    headers: {
-        'Content-Type': 'application/json',
-        'Authorization': 'Bearer ' + localStorage.getItem('token')
+primus.on('data', (json) => {
+    if(json.action === "addTransfer") {
+        updateNotifications(json.data);
     }
-}).then(response => {
-    return response.json();
-}).then(data => {
+});
+
+let updateNotifications = (data) => {
+    console.log(data);
+    document.querySelector(".notifications").innerHTML = "";
     for(let i = 0; i <= data.data.transfers.length; i++) {
         let nickname = data.user['nickname'];
         let recipient = data.data.transfers[i]['recipient'];
@@ -50,6 +58,18 @@ fetch(base_url + "/api/v1/transfers/", {
             document.querySelector(".notifications").insertAdjacentHTML('afterend', getNotification);
         }
     }
+}
+
+fetch(base_url + "/api/v1/transfers/", {
+    method: "get",
+    headers: {
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer ' + localStorage.getItem('token')
+    }
+}).then(response => {
+    return response.json();
+}).then(data => {
+    updateNotifications(data);
 
 }).catch(err => {
     console.log(err);
