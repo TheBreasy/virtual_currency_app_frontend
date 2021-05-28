@@ -10,7 +10,7 @@ if(!localStorage.getItem("token")) {
 //     console.log(recipient);
 // });
 
-primus = Primus.connect("/", {
+primus = Primus.connect("/js/primus.js", {
     reconnect: {
         max: Infinity // Number: The max delay before we try to reconnect.
         , min: 500 // Number: The minimum delay before we try reconnect.
