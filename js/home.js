@@ -22,7 +22,7 @@ fetch(base_url + "/users/" + localStorage.getItem('id'), {
     return response.json();
 }).then(data => {
     let getAmount =
-        `<img class="card--icon-m mb-1" src="images/coins.svg" alt="coins">
+        `<img class="card__icon mb-1" src="images/coins.svg" alt="coins">
          <p class="mb-1 color-grey font-bold font-size-l">${data.coins}</p>
          <span class="d-block uppercase font-size-xs">coins</span>`;
     document.querySelector(".amount").insertAdjacentHTML('afterbegin', getAmount);
@@ -50,7 +50,7 @@ let updateNotifications = (data) => {
         if(recipient === nickname) {
             let getNotification =
                 `<div class="card d-flex align-items-center mt-1 px-1 py-half">
-                    <img class="card--icon-s" src="images/notification.svg" alt="notification">
+                    <img class="card__icon--xs" src="images/notification.svg" alt="notification">
                     <span class="pl-1">Received ₡${data.data.transfers[i]['amount']} from ${data.data.transfers[i]['sender']}</span>
                 </div>`
 

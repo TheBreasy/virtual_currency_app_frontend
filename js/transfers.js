@@ -20,7 +20,7 @@ fetch(base_url + "/api/v1/transfers", {
             let getExpenses =
                 `<div class="d-flex justify-content-between align-items-center mt-1 px-1 py-half">
                     <div class="d-flex align-items-center">
-                        <img class="card--icon-ms" src="images/outgoing.svg" alt="outgoing">
+                        <img class="card__icon--s" src="images/outgoing.svg" alt="outgoing">
                         <span class="font-bold color-grey pl-1">${data.data.transfers[i]['recipient']}</span>
                     </div>
                     <span class="color-red">₡${data.data.transfers[i]['amount']}</span>
@@ -32,7 +32,7 @@ fetch(base_url + "/api/v1/transfers", {
             let getIncome =
                 `<div class="d-flex justify-content-between align-items-center mt-1 px-1 py-half">
                     <div class="d-flex align-items-center">
-                        <img class="card--icon-ms" src="images/incoming.svg" alt="incoming">
+                        <img class="card__icon--s" src="images/incoming.svg" alt="incoming">
                         <span class="font-bold color-grey pl-1">${data.data.transfers[i]['sender']}</span>
                     </div>
                     <span class="color-green">₡${data.data.transfers[i]['amount']}</span>

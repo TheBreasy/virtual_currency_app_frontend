@@ -70,6 +70,26 @@ h1, h2, h3, h4 {
   color: #ffffff;
 }
 
+input:focus-visible {
+  outline: none;
+}
+
+textarea:focus-visible {
+  outline: none;
+}
+
+textarea {
+  resize: none;
+}
+
+input, textarea, select {
+  font-family: "Montserrat", sans-serif;
+}
+
+button {
+  cursor: pointer;
+}
+
 .card {
   border-radius: 1rem;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
@@ -77,14 +97,29 @@ h1, h2, h3, h4 {
   background-color: #ffffff;
 }
 
-.card--header {
+.card__header {
   border-radius: 1rem 1rem 0 0;
   padding: 2rem 2rem;
   background-color: #ffffff;
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.08);
 }
 
-.card--icon-m {
+.card__input {
+  border-radius: 0.25rem;
+  border: none;
+  background-color: #ffffff;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.15);
+  padding: 0.75rem 1rem;
+  width: 80%;
+  font-size: 1rem;
+}
+
+.card__alert {
+  background-color: #f8d7da;
+  color: #dc3545;
+}
+
+.card__icon {
   width: 40px;
 }
 
@@ -93,6 +128,14 @@ h1, h2, h3, h4 {
 }
 
 .card--icon-s {
+  width: 20px;
+}
+
+.card__icon--s {
+  width: 26px;
+}
+
+.card__icon--xs {
   width: 20px;
 }
 
@@ -114,6 +157,14 @@ h1, h2, h3, h4 {
 
 .justify-content-between {
   justify-content: space-between;
+}
+
+.d-grid {
+  display: grid;
+}
+
+.grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .h-100-vh {
@@ -226,6 +277,10 @@ a {
   text-align: center;
 }
 
+.text-right {
+  text-align: right;
+}
+
 .color-blue {
   color: #0b6efd;
 }
@@ -270,42 +325,7 @@ a {
   font-size: 1.5rem;
 }
 
-input:focus-visible {
-  outline: none;
-}
-
-textarea:focus-visible {
-  outline: none;
-}
-
-textarea {
-  resize: none;
-}
-
-input, textarea, select {
-  font-family: "Montserrat", sans-serif;
-}
-
-button {
-  cursor: pointer;
-}
-
-.form__input {
-  border-radius: 0.25rem;
-  border: none;
-  background-color: #ffffff;
-  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.15);
-  padding: 0.75rem 1rem;
-  width: 80%;
-  font-size: 1rem;
-}
-
-.form__alert {
-  background-color: #f8d7da;
-  color: #dc3545;
-}
-
-nav {
+.nav {
   box-shadow: 0 -0.5rem 1rem rgba(0, 0, 0, 0.1);
   background-color: #ffffff;
 }

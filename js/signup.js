@@ -27,7 +27,7 @@ const base_url = "https://exchange-nodejs.herokuapp.com";
             localStorage.setItem("token", token);
             window.location.href = "login.html";
         } else {
-            let feedback = document.querySelector(".form__alert");
+            let feedback = document.querySelector(".card__alert");
             feedback.textContent = json.message;
             feedback.classList.remove("hidden");
         }

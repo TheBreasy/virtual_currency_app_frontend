@@ -99,7 +99,7 @@ document.querySelector("#send").addEventListener("click", () => {
 
             window.location.href = "index.html";
         } else {
-            let feedback = document.querySelector(".form__alert");
+            let feedback = document.querySelector(".card__alert");
             feedback.textContent = json.message;
             feedback.classList.remove("hidden");
         }
