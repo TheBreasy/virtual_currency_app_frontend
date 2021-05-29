@@ -1,20 +1,54 @@
+input:focus-visible
+  outline: none
+
+textarea:focus-visible
+  outline: none
+
+textarea
+  resize: none
+
+input, textarea, select
+  font-family: 'Montserrat', sans-serif
+
+button
+  cursor: pointer
+
 .card
   border-radius: 1rem
   box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%)
   border: none
   background-color: $white
 
-.card--header
+.card__header
   border-radius: 1rem 1rem 0 0
   padding: 2rem 2rem
   background-color: $white
   box-shadow: 0 0.125rem 0.25rem rgb(0 0 0 / 8%)
 
-.card--icon-m
+.card__input
+  border-radius: 0.25rem
+  border: none
+  background-color: $white
+  box-shadow: 0 0.125rem 0.25rem rgb(0 0 0 / 15%)
+  padding: 0.75rem 1rem
+  width: 80%
+  font-size: 1rem
+
+.card__alert
+  background-color: $alertred
+  color: $jasperred
+
+.card__icon
   width: 40px
 
 .card--icon-ms
   width: 26px
 
 .card--icon-s
+  width: 20px
+
+.card__icon--s
+  width: 26px
+
+.card__icon--xs
   width: 20px
